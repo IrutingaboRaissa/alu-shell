@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
+# A script that displays "Best School" 10 times but for the 9th iteration ,displays "Best School" and then "Hi" on a new line
 
-# A script that displays "Best School" 10 times.
-
-# A script that displays Best School and then "Hi" on a new line.
- 
-count =o
+count=0
 
 while [ $count -lt 10 ]
 do
