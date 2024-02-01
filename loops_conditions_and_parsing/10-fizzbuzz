@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script displays numbers from 1 to 100
 
-for (( num=1;num<=100,num++ )); do
+for (( num -eq 1; num -le 100;num++ )); do
        if (( num % 3 == 0 && num % 5 == 0 )); then
               echo "FizzBuzz"
        elif (( num % 3 == 0 )); then
