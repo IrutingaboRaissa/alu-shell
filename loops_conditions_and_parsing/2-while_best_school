@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # The scripst is displaying "Best School" 10 times.
 
-i="1"
+count=0
 
-while [ $i-le 10 ]
+while [ $count -lt 10 ]
 do
-xterm &	
-i=$((i+1))
+	echo "Best School"
+	(( count++ ))
 done
