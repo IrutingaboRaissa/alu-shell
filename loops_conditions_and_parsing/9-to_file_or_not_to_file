@@ -3,17 +3,17 @@
 
 if [ -e "school" ]
 then
-     echo "school file exists"
+     echo "school is a regular file"
      if [ -s "school" ] 
      then 
-	   echo "file is not empty" 
+	   echo "school file exists" 
      else
            echo "file is empty"
      fi
 
      if [ -f "school" ]	
      then
- 	     echo "school is regular file"
+ 	     echo "file is not empty"
      fi
 else
      echo "school file does not exist"
