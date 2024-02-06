@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-# This script that stops 4-to_infinity_and_beyond process.
+# This script that stops 4-to_infinity_and_beyond
 
-prog_pid=()
-readarray -t prog_pid < <(pgrep -la -x "bash.*" | grep '4-to_infinity_and_beyond' | cut -d '' -f 1)
-for ((i = 0; i < "${#prog_pid[@]}"; i++)) do
-        kill -s SIGTERM "${prog_pid[i]}"
-done
+# get the pid of the program
+id=$(pgrep "bash ./4-to_infinity_and_beyond" -f)
+
+# terminate the infinate process
+if [ -n "$id" ]
+then
+ kill -15 "$id"
+fi 
